@@ -4,10 +4,17 @@
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+	<GenerateEmbeddedFilesManifest>true</GenerateEmbeddedFilesManifest>
   </PropertyGroup>
 
 	<ItemGroup>
 		<EmbeddedResource Include="Libraries\**\*" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.2.0" />
+	  <PackageReference Include="Microsoft.AspNetCore.StaticFiles" Version="2.2.0" />
+	  <PackageReference Include="Microsoft.Extensions.FileProviders.Embedded" Version="6.0.9" />
 	</ItemGroup>
 
 </Project>

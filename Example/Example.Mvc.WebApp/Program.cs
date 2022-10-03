@@ -1,3 +1,5 @@
+using Design.Aspnet.JsPlugin;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -15,6 +17,9 @@ if (!app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
+
+// loads the client plugins into provided directory
+app.LoadClientPlugins("/dsg-plugin");
 
 app.UseRouting();
 

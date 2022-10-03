@@ -6,4 +6,8 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\Src\Design.Aspnet.JsPlugin\Design.Aspnet.JsPlugin.csproj" />
+  </ItemGroup>
+
 </Project>

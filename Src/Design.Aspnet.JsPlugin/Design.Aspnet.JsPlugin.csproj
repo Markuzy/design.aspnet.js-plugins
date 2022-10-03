@@ -6,25 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
-  <ItemGroup>
-    <None Update="Libraries\CategoryA\ca.js">
-      <SubType>Code</SubType>
-    </None>
-    <None Update="Libraries\CategoryA\Extended1\ca.e1.b.js">
-      <SubType>Code</SubType>
-    </None>
-    <None Update="Libraries\CategoryA\Extended2\ca.e2.a.js">
-      <SubType>Code</SubType>
-    </None>
-    <None Update="Libraries\CategoryB\Extended1\cb.e1.c.js">
-      <SubType>Code</SubType>
-    </None>
-    <None Update="Libraries\CategoryB\Extended1\cb.e1.a.js">
-      <SubType>Code</SubType>
-    </None>
-    <None Update="Libraries\CategoryB\Extended1\cb.e1.b.js">
-      <SubType>Code</SubType>
-    </None>
-  </ItemGroup>
+	<ItemGroup>
+		<EmbeddedResource Include="Libraries\**\*" />
+	</ItemGroup>
 
 </Project>

@@ -17,13 +17,13 @@ namespace Design.Aspnet.JsPlugin
             {
                 var provider = new ManifestEmbeddedFileProvider(
                     assembly: Assembly.GetAssembly(typeof(Setup)), "Libraries");
+                // var provider = new EmbeddedFileProvider(Assembly.GetAssembly(typeof(Setup)), "Design.Aspnet.JsPlugin.Libraries");
+
                 builder.UseStaticFiles(new StaticFileOptions
                 {
                     FileProvider = provider,
                 });
             });
-
-
 
             return app;
         }

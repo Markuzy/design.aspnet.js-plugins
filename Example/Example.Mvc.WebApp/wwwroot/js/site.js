@@ -1,4 +1,5 @@
-﻿(function (listhelper, $, undefined) {
+﻿// for demonstrating outputting the scripts referenced here.
+(function (listhelper, $, undefined) {
     //Private Property
     var targetContainer = ".content-box";
     var listType = "ol"

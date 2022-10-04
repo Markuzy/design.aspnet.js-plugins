@@ -1,0 +1,22 @@
+﻿@page
+@model Example.Razor.WebApp.Pages.IndividualModel
+@{
+     ViewData["Title"] = "Individual Scripts Loaded";
+}
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <h2 class="display-8">Individual Library Scripts Loaded</h2>
+    <div class="content-box">
+        None
+    </div>
+</div>
+
+@section Scripts {
+    <script src="~/dsg-plugin/CategoryA/ca.js" asp-append-version="true"></script>
+    <script src="~/dsg-plugin/CategoryA/Extended1/ca.e1.a.js" asp-append-version="true"></script>
+    <script src="~/dsg-plugin/CategoryA/Extended1/ca.e1.b.js" asp-append-version="true"></script>
+    <script src="~/dsg-plugin/CategoryA/Extended2/ca.e2.a.js" asp-append-version="true"></script>
+    <script src="~/dsg-plugin/CategoryB/Extended1/cb.e1.a.js" asp-append-version="true"></script>
+    <script src="~/dsg-plugin/CategoryB/Extended1/cb.e1.b.js" asp-append-version="true"></script>
+    <script src="~/dsg-plugin/CategoryB/Extended1/cb.e1.c.js" asp-append-version="true"></script>
+}

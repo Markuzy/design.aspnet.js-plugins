@@ -1,0 +1,16 @@
+﻿@page
+@model Example.Razor.WebApp.Pages.BundledModel
+@{
+     ViewData["Title"] = "Bundled Scripts Loaded";
+}
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <h2 class="display-8">Bundled Library Scripts Loaded</h2>
+    <div class="content-box">
+        None
+    </div>
+</div>
+
+@section Scripts {
+    <script src="~/dsg-plugin/combined.js" asp-append-version="true"></script>
+}

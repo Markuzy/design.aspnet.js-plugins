@@ -6,7 +6,12 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorPages();
 
 // web optimizer as POC of able to minify such files
-builder.Services.AddWebOptimizer();
+builder.Services.AddWebOptimizer(pipeline =>
+{
+    pipeline.AddJavaScriptBundle("/dsg-plugin/combined.js", JsPluginHelper.GetLibraryPaths()).UseFileProvider(JsPluginHelper.GetProvider()).MinifyJavaScript();
+    pipeline.MinifyJsFiles();
+    
+});
 
 var app = builder.Build();
 

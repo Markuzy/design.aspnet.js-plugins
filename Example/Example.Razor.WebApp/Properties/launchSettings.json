@@ -8,7 +8,7 @@
     }
   },
   "profiles": {
-    "Example.Mvc.WebApp": {
+    "Example.Razor.WebApp": {
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": true,

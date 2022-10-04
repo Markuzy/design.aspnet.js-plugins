@@ -7,7 +7,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="LigerShark.WebOptimizer.Core" Version="3.0.372" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\..\Src\Design.Aspnet.JsPlugin\Design.Aspnet.JsPlugin.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\dsg-plugin\" />
   </ItemGroup>
 
 </Project>

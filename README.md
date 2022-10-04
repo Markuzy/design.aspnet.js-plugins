@@ -29,7 +29,7 @@ app.LoadClientPlugins(config =>
 - Script merges (Done POC with Web Optimizer library bundle feature)
 - Script minification (Done POC with Web Optimizer library minification feature that requires bundle feature)
 
-See example usage of POC Web Optimizer
+See example usage of POC via [Web Optimizer](https://github.com/ligershark/WebOptimizer)
 ```csharp
 // web optimizer as POC of able to minify such files
 builder.Services.AddWebOptimizer(pipeline =>

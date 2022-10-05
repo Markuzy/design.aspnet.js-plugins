@@ -19,7 +19,7 @@ namespace Design.Aspnet.JsPlugin
 
         public static string[] GetLibraryPaths()
         {
-            return GetLibraryDict(false).Select(x => x.Value).ToArray();
+            return GetLibraryDict(false).Select(x => x.Value.Replace(@"\\", @"\")).ToArray();
         }
 
         internal static Dictionary<string, string> GetLibraryDictInternal()

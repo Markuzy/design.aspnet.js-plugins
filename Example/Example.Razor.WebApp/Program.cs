@@ -8,9 +8,18 @@ builder.Services.AddRazorPages();
 // web optimizer as POC of able to minify such files
 builder.Services.AddWebOptimizer(pipeline =>
 {
-    pipeline.AddJavaScriptBundle("/dsg-plugin/combined.js", JsPluginHelper.GetLibraryPaths()).UseFileProvider(JsPluginHelper.GetProvider()).MinifyJavaScript();
-    pipeline.MinifyJsFiles();
-    
+    var provider = JsPluginHelper.GetProvider();
+    var libPaths = JsPluginHelper.GetLibraryPaths();
+    pipeline.AddJavaScriptBundle("/dsg-plugin/combined.js", libPaths).UseFileProvider(provider).MinifyJavaScript();
+
+    // this does not work
+    //foreach (var asset in pipeline.AddFiles("text/javascript", "/dsg-plugin/CategoryA/ca.js").)
+    //{
+    //    asset.UseFileProvider(provider).MinifyJavaScript();
+    //}
+
+    // control example of minifying site.js
+    pipeline.AddFiles("text/javascript", "/js/site.js").Single().MinifyJavaScript();
 });
 
 var app = builder.Build();
